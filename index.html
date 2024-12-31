@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <section class="container">
+        <div class="section_text">
+            <header>
+                <div class="badge"></div>
+                <div class="badge_rig"></div>
+                <div class="section_welcome">
+                    <marquee behavior="" direction="left">
+                        <h1> 🎊 Heureuse année 2025 — Faisons de cette année une réussite 🎊 </h1>
+                    </marquee>
+                </div>
+            </header>
+            <h2>Un Nouveau Chapitre</h2>
+            <p class="ken">
+                L'année 2025 est un livre vierge, une toile blanche qui attend d'être remplie de tes rêves, de tes
+                réussites et de tes souvenirs. Chaque jour est une nouvelle chance de redéfinir ce que tu veux
+                accomplir, de repousser les limites de ton potentiel et de créer un impact durable sur ceux qui
+                t'entourent.
+            </p>
+            <p class="ken">
+                Ensemble, nous avons le pouvoir de façonner notre avenir. Fais de 2025 l'année où tu t'engages
+                pleinement à devenir la meilleure version de toi-même. Le monde est à tes pieds, il ne te reste plus
+                qu'à l'embrasser et à t'envoler.
+            </p>
+          
+            <h3 class="hool"><i class="fa-solid fa-snowflake"></i>   Les 3 clés pour briller en 2025   <i class="fa-solid fa-snowflake"></i></h3>
+            <ul class="questions">
+                <li><i class="fa-solid fa-check-double"></i> De quelle façon te vois-tu évoluer cette année ?</li>
+                <li><i class="fa-solid fa-check-double"></i> Quel genre d' Homme aimerais-tu devenir ?</li>
+                <li><i class="fa-solid fa-check-double"></i> Que veux-tu que les gens pensent de toi quand ils te voient arriver ?</li>
+            </ul>
+            <blockquote>
+                "La seule façon de réaliser l'impossible est de croire que c'est possible." — <strong>Charles
+                    Kingsleigh</strong>
+            </blockquote>
+            <div class="btn_open">
+                <p class="ken">Kenneth B. SELO</p>
+                <button class="celebrate-btn animate__animated animate__heartBeat animate__infinite	infinite" onclick="showMessage()">Célébrer <i class="fas fa-rocket"></i></button>
+            </div>      
+        </div>
+    </section>
+
+
+    <div id="confetti"></div>
+
+
+    <audio id="celebrationAudio" src="./audio/nikanor_yinko_tche_version_francaise_vibes_and_dreams_episode_v_clip_officiel_mp3_30087.mp3"></audio>
+
+    <script>
+
+        function showMessage() {
+            generateconfetti();
+            setTimeout(() => {
+                playAudio()
+            }, 3500)
+        }
+
+        function generateconfetti() {
+            var animateConfetti = document.getElementById('confetti')
+            for (let i = 0; i < 400; i++) {
+                var conffetiPiece = document.createElement('div')
+                conffetiPiece.classList.add('confetti');
+                conffetiPiece.style.left = `${Math.random() * 100}%`
+                conffetiPiece.style.animationDuration = `${Math.random() * 3 + 2}s`
+                animateConfetti.appendChild(conffetiPiece)
+            }
+        }
+
+
+
+        function playAudio() {
+            var audio = document.getElementById("celebrationAudio");
+            audio.play();
+        }
+
+    </script>
+
+</body>
+
+</html>
